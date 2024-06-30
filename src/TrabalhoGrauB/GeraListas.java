@@ -58,12 +58,14 @@ public class GeraListas {
 	 
 	 private static int[] GeraListaAleatoriaSemRepetidos(int tamanho) {
 		 int[] lista = new int[tamanho];
+			int aux;
+			int temp;
 		 
 		 lista = GeraListaCrescente(tamanho);
 		 
 			for (int i = 0; i < lista.length; i++) {
-				int aux = (int) (Math.random() * tamanho);
-				int temp = lista[aux];
+				aux = (int) (Math.random() * tamanho);
+				temp = lista[aux];
 				lista[aux] = lista[i];
 				lista[i] = temp;
 			}

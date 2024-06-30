@@ -22,16 +22,12 @@ public abstract class MetodosDeOrdenacao {
 		return tempos;
 	}
 
-	public void adicionaTempo(long tempo) {
-		for (int i = 0; i < 10; i++) {
-			if (tempos[i] == 0) {
-				tempos[i] = tempo;
-			}
-		}
+	public void adicionaTempo(long tempo, int index) {
+		this.tempos[index] = tempo;
 	}
 	
 	public void calculaValores() {
-		calulaMedia();
+ 		calulaMedia();
 		calulaVariancia();
 		calulaDesvioPadrao();
 		calulaMediaDentroIntervalo();
@@ -43,7 +39,7 @@ public abstract class MetodosDeOrdenacao {
 
 	public void zeraTempos() {
 		for (int i = 0; i < 10; i++) {
-			tempos[i] = 0;
+			this.tempos[i] = 0;
 		}
 	}
 
@@ -61,7 +57,7 @@ public abstract class MetodosDeOrdenacao {
 		double tempoMenosMedia = 0;
 		for (int i = 0; i < 10; i++) {
 			tempoMenosMedia = tempos[i] - tempoMedia;
-			somaTemposMenosMediaQuadrado = somaTemposMenosMediaQuadrado + Math.sqrt(tempoMenosMedia);
+			somaTemposMenosMediaQuadrado = somaTemposMenosMediaQuadrado + ( tempoMenosMedia * tempoMenosMedia );
 		}
 		this.tempoVariancia = somaTemposMenosMediaQuadrado / 9;
 		return tempoVariancia;
