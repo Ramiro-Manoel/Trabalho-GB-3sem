@@ -1,3 +1,23 @@
+É necessário digitar o tamanho da lista e o tipo da lista a cada execução
+
+tipos de listas:
+
+0 - Ordenado crescente
+1 - Ordenado decrescente
+2 - Aleatório sem repetidos 
+3 - Aleatório com repetidos
+
+O sistema calcula a média, a variância, o desvio padrão e a média dos valores dentro do desvio padrão, e todos os dados, para os 7 métodos de ordenação
+
+Por conta do grande número de recursividade, o QuickSort dá erro de stackOverFlow, tentamos alterar a implementação, porém não funcionou
+isso só ocorria quando realizamos os testes a partir de 16000 e nos dois primeiros tipos de lista (provavelmente pelo grande número de recursão necessária).
+(Deixamos em branco na tabela quando dava erro)
+
+Com isso percebemos que, quando as listas estão ordenadas, o QuickSort não é tão eficiente, pois ele demora a perceber que estão ordenadas
+Como o BubbleSort, que quando é utilizado na lista 1, logo percebe que está ordenado e é o mais rápido.
+
+Em casos que as listas estão realmente desordenadas, o QuickSort é o mais eficiente.
+
 Tabela: Ordenada Crescente
 | Tamanho do Array (n) | Bubble Sort | Insertion Sort | Selection Sort | Heap Sort | Shell Sort | Merge Sort | Quick Sort |
 | -------------------- | ----------- | -------------- | -------------- | --------- | ---------- | ---------- | ---------- |
