@@ -17,6 +17,11 @@ Com isso percebemos que, quando as listas estão ordenadas, o QuickSort não é 
 Como o BubbleSort, que quando é utilizado na lista 1, logo percebe que está ordenado e é o mais rápido.
 
 Em casos que as listas estão realmente desordenadas, o QuickSort é o mais eficiente.
+Quando a lista é crescente, graças a implementação, o BubbleSort e o InsertionSort logo percebem que a lista já está ordenada, o que os faz mais eficientes.
+Quando a lista é decrescente, o ShellSort se destaca mais que os outros.
+
+
+TABELAS:
 
 Tabela: Ordenada Crescente
 | Tamanho do Array (n) | Bubble Sort | Insertion Sort | Selection Sort | Heap Sort | Shell Sort | Merge Sort | Quick Sort |
